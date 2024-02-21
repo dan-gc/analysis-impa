@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  20 FEB 2024 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  21 FEB 2024 12:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1213,17 +1213,31 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 LaTeX Warning: Command \i invalid in math mode on input line 2827.
 
 [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87]
-[88] [89] [90] [91] [92] [93
+[88] [89] [90] [91] [92] [93]
+Overfull \hbox (1.74149pt too wide) in paragraph at lines 3653--3655
+\OT1/ppl/m/n/10 Agora $\OML/cmm/m/it/10 S$ []\OT1/ppl/m/n/10 e uma bijec[][]ao 
+cont[]^^Pnua, as-sim pelo Teo-rama da Aplica[][]ao Aberta ele []e cont[]^^Pnua.
 
-] [94] (./analysis-impa.aux)
+ []
+
+
+LaTeX Warning: cref reference format for label type `thmt@dummyctr' undefined o
+n input line 3659.
+
+[94] [95] [96] [97] [98] [99
+
+] [100] (./analysis-impa.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `analysis-impa.out' has not changed.
 (rerunfilecheck)             Checksum: 6C05F52B345F9D09D81EC4CC40FB465D;6178.
  ) 
 Here is how much of TeX's memory you used:
- 30678 strings out of 476025
- 618431 string characters out of 5790018
+ 30734 strings out of 476025
+ 619238 string characters out of 5790018
  1868388 words of memory out of 5000000
- 49830 multiletter control sequences out of 15000+600000
+ 49836 multiletter control sequences out of 15000+600000
  531918 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,85p,1202b,1219s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1246,10 +1260,10 @@ exlive/2023/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/
 2023/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2023/t
 exmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-di
 st/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on analysis-impa.pdf (94 pages, 539670 bytes).
+Output written on analysis-impa.pdf (100 pages, 555008 bytes).
 PDF statistics:
- 1508 PDF objects out of 1728 (max. 8388607)
- 1360 compressed objects within 14 object streams
- 781 named destinations out of 1000 (max. 500000)
+ 1589 PDF objects out of 1728 (max. 8388607)
+ 1434 compressed objects within 15 object streams
+ 831 named destinations out of 1000 (max. 500000)
  293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

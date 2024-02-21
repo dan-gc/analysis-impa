@@ -33,4 +33,4 @@
 \contentsline {section}{\numberline {21}Teoria espectral}{82}{section.21}%
 \contentsline {section}{\numberline {22}Exponencial de elementos em álgebras de Banach}{89}{section.22}%
 \contentsline {section}{\numberline {23}Teorema espectral para operadores compactos}{90}{section.23}%
-\contentsline {section}{\numberline {24}As melhores coisas na matemática}{93}{section.24}%
+\contentsline {section}{\numberline {24}As melhores coisas na matemática}{99}{section.24}%

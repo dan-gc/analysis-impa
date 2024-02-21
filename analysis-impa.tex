@@ -3534,14 +3534,14 @@ Assim, o único ponto de acumulação de um operador compacto é zero.
 		Em particular $\img(T-\lambda)$ tem codimensão finita.
 	\end{enumerate}
 \end{teo}
-\begin{proof}
+\begin{proof}\leavevmode
 	\begin{enumerate}
 		\item $T|_{\ker(T-\lambda)}=\lambda\Id|_{\ker(T-\lambda)}$. Como $T$ é compacto e $\lambda\neq0$, $\Id_{\ker(T-\lambda)}$ é compacta, assim $\dim\ker(T-\lambda)<\infty$.
 		\item Como $Z=\ker(T-\lambda)$ tem dimensão finita, $\exists Y\subseteq X$ subespaço fechado tal que $X=Z\oplus Y$.
 		
 		Note que
 		\[\img(T-\lambda)=\img(T-\lambda)|_Y.\]
-		\begin{exer*}
+		\begin{exer*}\label{exer:img-fechada}
 			Suponha $E\to F$, $\delta>0$ e $\|Sx\|\geq \delta\|x\|$ (continuidade da inversa?), então $\img(S)$ é fechado.
 		\end{exer*}
 		Suponha que existe uma sequência $(x_n)\subseteq\partial B_Y$ tal que
@@ -3574,6 +3574,242 @@ Assim, o único ponto de acumulação de um operador compacto é zero.
 		\[\dim\img\pi^*=\dim(X/\img(T-\lambda)).\]
 		Portanto,
 		\[\dim(X/\img(T-\lambda))=\dim\ker(T^*-\lambda).\]
+	\end{enumerate}
+\end{proof}
+
+\begin{defn}
+	Seja $T\in \mathcal{L}(X,Y)$ tal que
+	\begin{enumerate}
+		\item $\dim \ker T<\infty$.
+		\item $\operatorname{codim}\img T<\infty$.
+	\end{enumerate}
+	Então $T$ é chamado de um \textbf{\textit{operador Fredholm}}. 
+\end{defn}
+\begin{lema}
+	Seja $T\in K(X)$ e $\lambda\in\C\backslash\{0\}$. Então
+	\begin{enumerate}
+		\item $\exists m\in\N$ tal que 
+		\[\ker(T-\lambda)^n=\ker(T-\lambda^{n+1}).\]
+		\item Existe $n\in \N$ tal que
+		\[\img(T-\lambda)^n=\img(T-\lambda)^{n+1}\]
+	\end{enumerate}
+\end{lema}
+\begin{obs}
+	$\ker T^n\subseteq T^{n+1}$ e $\img T^n\supseteq \img T^{n+1}$.
+\end{obs}
+\begin{proof}
+	Suponha falso, ie.
+	\[\ker(T-\lambda)^n\subsetneq\ker(T-\lambda)^{n+1}\quad\forall n\in\N.\]
+	Pelo lema de Riesz, existe $(x_n)\subseteq\partial B_X$ tal que
+	\begin{enumerate}
+		\item  $x_n\in \ker(T-\lambda)^n$.
+		\item $d(x_{n+1},\ker(T-\lambda)^n)<1/2$.
+	\end{enumerate}
+	\begin{af*}
+		$T(x_n)$ não possui uma subsequência convergente.
+	\end{af*}
+	\begin{align*}
+		T(x_n)-T(x_m)&=\lambda x_n+(T-\lambda)x_n-(T-\lambda)(x_m)-\lambda x_m.
+	\end{align*}
+	Se $n>m$,
+	\[(T-\lambda)x_n-(T-\lambda)x_n-\lambda x_n\in\ker(T-\lambda)^{n-1}.\]
+	Como $d(x_n,\ker(T-\lambda)^{n-1})>1/2$,
+	\begin{align*}
+		\|Tx_n-Tx_m\|&=\|\lambda x_n+z\|\\
+		&=|\lambda|\left\|x_n+\frac{z}{\lambda}\right\|\\
+		&>|\lambda|/2
+	\end{align*}
+	
+	{\color{orange} O item 2, exercício.}
+\end{proof}
+\begin{exer*}
+	Se $S$ é Fredholm, o lema anterior vale substituindo $T-\lambda$ por $S$?
+\end{exer*}
+
+\begin{defn}
+	Seja $T\in\mathcal{L}(X,Y)$ Fredholm. O \textbf{\textit{índice}} de $T$ é dado por
+	\[\operatorname{ind}(T)=\dim\ker T-\operatorname{codim}\img T.\]
+\end{defn}
+\begin{teo}\label{teo:fredholm-conditions}
+	Se $T\in\mathcal{L}(X,Y)$ e $S\in\mathcal{L}(Y,Z)$ são Fredholm, então
+	\begin{enumerate}
+		\item $S\circ T$ é Fredholm.
+		\item $\operatorname{ind}(ST)=\operatorname{ind}S 
+		+\operatorname{ind}T$.
+	\end{enumerate}
+\end{teo}
+Primeiro vamos provar:
+\begin{prop}
+	Seja $T\in\mathcal{L}(X,Y)$ tal que existe $Z\subseteq Y$ fechado tal que
+	\[Y=Z\oplus\img T\quad\text{(algebricamente)}.\]
+	(Note que se subessemos que o espaço $\img T$ é fechado, já teriamos que ele é complementado.) Então $\img T$ é fechado.
+\end{prop}
+\begin{proof}
+	Substituindo $T$ por 
+	\[\tilde{T}:[x]\in X/\ker T\mapsto Tx\in Y,\]
+	podemos supor que $T$ é injetivo. Para usar o teorema da Aplicação Aberta, defina
+	\[S:X\oplus Z\to Y\]
+	como
+	\[S(x,y)=Tx+y.\]
+	Agora $S$ é uma bijecção contínua, assim pelo Teorama da Aplicação Aberta ele é contínua. Logo, se $x\in X$,
+	\begin{align*}
+		\|x\|&=\|S^{-1}Tx\|\\
+		&\leq\|S^{-1}\|\|Tx\|
+	\end{align*}
+	Por \cref{exer:img-fechada}, $\img T$ é fechada.
+\end{proof}
+\begin{proof}[Prova do \cref{teo:fredholm-conditions}]
+	Usando as hipóteses e a proposição anterior, sabemos que existem subespaços fechados $Y_1,Y_2,Y_3\subseteq Y$ tal que
+	\begin{itemize}
+		\item $\img T=(\ker S\cap \img T)\oplus Y_1$.
+		\item $\ker S=(\ker S\cap \img T)\oplus Y_2$.
+		\item $Y=\img T\oplus Y_2\oplus Y_3$.
+	\end{itemize}
+	Logo,
+	\[\dim \ker (ST)=\dim\ker T+\dim S\cap \img T.\]
+	(Isso segue de que
+	\[x\in \ker (ST)\mapsto Tx\in\ker S\cap \img T\]
+	é sobrejetiva.)
+	
+	Note que
+	\[\img S=S(Y)=S(Y_1)+S(Y_3)\]
+	e $\dim Y_3<\infty$.
+	
+	Logo
+	\[S(Y)=S(T(X))+S(Y_3)\]
+	e como $\operatorname{codim}S(Y)<\infty$, segue que
+	\[\operatorname{codim}ST(X)<\infty.\]
+	
+	\begin{obs}
+		Nossa meta é mostrar que
+		\[\operatorname{ind}ST=\operatorname{ind}T+\operatorname{ind}S,\]
+		ou seja
+		\begin{align*}
+			\dim\ker (ST)+\operatorname{codim}&\img T+\operatorname{codim}\img T\\
+			&=\operatorname{codim}\img (ST)+\dim\ker T+\dim\ker S.
+		\end{align*}
+	\end{obs}
+	O que temos até agora é que
+	\begin{align*}
+		\dim\ker (ST)+\operatorname{codim}&\img T+\operatorname{codim}\img T\\
+		&=\dim\ker T+\dim \ker S\cap\img T+\operatorname{codim}\img T+\operatorname{codim}\img S\\
+		&=\dim\ker T+\dim \ker S\cap\img T+{\color{persiangreen}\dim Y_2+\dim Y_3}+\operatorname{codim}\img S\\
+		&=\dim\ker T++{\color{blue-violet}\dim Y_2+\dim Y_3}+\operatorname{codim}\img S\\
+		&=\dim\ker T++\dim Y_2+\dim Y_3+{\color{cyan}\dim S(Y_3)+\operatorname{codim}\img S}\\
+		&=\dim\ker T+\dim \ker S+\operatorname{codim}\img (ST)\\
+		&=\operatorname{codim}\img (ST)+\dim\ker T+\dim\ker S.
+	\end{align*}
+\end{proof}
+\begin{coro}
+	Se $T\in\mathcal{L}(X)$ é Fredholm e $n\in\N$, então
+	\[\operatorname{ind}(T^n)=n\operatorname{ind}T.\]
+\end{coro}
+
+\begin{teo}
+	Sejam $T\in K(X)$ e $\lambda\in \C\backslash\{0\}$.
+	\begin{enumerate}
+		\item $\operatorname{ind}(T-\lambda)=0$.
+		\item \textbf{(Alternativa de Fredholm.)} $T-\lambda$ é injetivo se e somente se $T-\lambda$ for sobrejetivo.
+		\item Seja $n\in\N$ o menor natural tal que
+		\[\ker (T-\lambda)^n=\ker (T-\lambda)^{n+1},\]
+		então
+		\[X=\ker(T-\lambda)^n\oplus \img(T-\lambda)^n.\]
+	\end{enumerate}
+\end{teo}
+\begin{proof}\leavevmode
+	\begin{enumerate}
+		\item Fixe $m\in\N$ tal que
+		\[\operatorname{ind}(T-\lambda)^m=\img(T-\lambda)^{m+1}.\]
+		Pegue $i,j$ distintos e maiores que $\max\{n,m\}$.
+		
+		Logo,
+		\[\ker(T-\lambda)^i=\ker(T-\lambda)^j\]
+		e
+		\[\img(T-\lambda)^i=\img(T-\lambda)^j,\]
+		assim
+		\[\operatorname{ind}(T-\lambda)^i=\operatorname{ind}(T-\lambda)^j\]
+		e
+		\[\operatorname{ind}(T-\lambda)=j\operatorname{ind}(T-\lambda).\]
+		Como $i\neq j$,
+		\[\operatorname{ind}(T-\lambda)=0.\]
+		\item Imediato.
+		\item 
+		\begin{exer*}
+			$\img(T-\lambda)^n$ é fechado para todo $n\in\N$.
+		\end{exer*}
+		\begin{af*}
+			$\ker(T-\lambda)^n\cap\img(T-\lambda)^n=\{0\}$.
+		\end{af*}
+		Sponha que $x$ está nessa interseção. Logo existe $y\in X$ tal que
+		\[x=(T-\lambda)^ny.\]
+		Mas $(T-\lambda)^nx=0$, logo
+		\[(T-\lambda)^{2n}y=0.\]
+		Como
+		\[\ker(T-\lambda)^{2n}=\ker(T-\lambda)^n,\]
+		e assim $(T-\lambda)^ny=0$ e $x=0$.
+		
+		Por 1, e pelo corolário anterior,
+		\[\operatorname{ind}(T-\lambda)^n=0.\]
+		Logo
+		\[\dim\ker(T-\lambda)^n=\operatorname{codim}\img (T-\lambda)^n.\]
+		Como
+		\[\ker(T-\lambda)^n\cap\img(T-\lambda)^n=\{0\}.\]
+		Segue que
+		\[X=\ker(T-\lambda)^n+\img(T-\lambda)^n.\]
+	\end{enumerate}
+\end{proof}
+Finalmente,
+\begin{teo}[espectral de operadores compactos]
+	Seja $X$ Banach e $T\in K(X)$.
+	\begin{enumerate}
+		\item Se $\lambda\in\sigma(T)\backslash\{0\}$, então $\lambda$ é autovalor de $T$.
+		\item Se $\lambda\in\sigma(T)\backslash\{0\}$, $\lambda$ é ponto isolado de $\sigma(T)$.
+		\item $\sigma(T)$ é enumerável.
+	\end{enumerate}
+\end{teo}
+\begin{exer*}
+	Sejam $Y$ e $Z$ Banach e $S_1\in\mathcal{L}(Y)$ e $S_2\in\mathcal{L}(Z)$. Defina $X:=Y\oplus Z$ e um operador
+	\begin{align*}
+		T:(y,z)\in Y\oplus Z=X\mapsto(S_1y,S_2z)\in Y\oplus Z=X.
+	\end{align*}
+	Então
+	\[\sigma_{\mathcal{L}(X)}(T)=\sigma_{\mathcal{L}(Y)}(S_1)\cup\sigma_{\mathcal{L}(Z)}(S_2).\]
+\end{exer*}
+\begin{proof}\leavevmode
+	\begin{enumerate}
+		\item Como $\lambda\in\sigma(T)$, $T-\lambda$ é não inversível. Como $T$ é compacto e $\lambda\neq0$, se $T-\lambda$ é injetivo, é também bijetivo. Pelo Teorema da Aplicação Aberta, ele é inversível, que não é possível. Logo $T-\lambda$ não é injetivo, ou seja, $\lambda$ é autovalor de $T$.
+		
+		\item Pegue $n\in\N$ tal que
+		\[X=\underbrace{\ker(T-\lambda)^n}_Y\oplus\underbrace{\img(T-\lambda)^n}_Z.\]
+		Note que $T(Y)\subseteq Y$ e $T(Z)\subseteq Z$.
+		
+		Logo,
+		\[T=(T|_Y,T_Z):(y,z)\in Y\oplus Z\mapsto(T|_Yy,T|_Zz)\in Y\oplus Z.\]
+		
+		\begin{af*}
+			$\sigma_{\mathcal{L}(Y)}(T|_Y)=\{\lambda\}$.
+		\end{af*}
+		Por definição de $Y$,
+		\[(T|_Y-\lambda\Id_Y)^n=0.\]
+		Como o espectro comuta com polínomios, ie., ``$\sigma(p)=p\sigma$", considerando
+		\[p(z)=(z-\lambda)^n,\]
+		obtemos que
+		\[p(\sigma(T|_Y))=\sigma(p(T|_Y))=\sigma(0)=\{0\},\]
+		e assim
+		\[\sigma(T|_Y)=\{\lambda\}.\]
+		Note que $(T|_Z-\lambda\Id_Z)^n$ é inversível: segue da definição de $X=Y\oplus Z$ e do Teorema da Aplicação Aberta.
+		
+		Logo $T|_Z-\lambda\Id_Z$ é inversível, ie.
+		\[\lambda\notin\sigma_{\mathcal{L}(Z)}(T|_Z).\]
+		
+		Pelo exercício,
+		\[\sigma(T)\backslash\{\lambda\}=\sigma_{\mathcal{L}(Z)}(T|_Z).\]
+		
+		Como $\sigma_{\mathcal{L}(Z)}(T|_Z)$ é fechado, $\{\lambda\}$ é aberto em $\sigma(T)$.
+		
+		\item Considere a coberta aberta
+		\[\sigma(T)=\bigcup_{\lambda\in\sigma(T)\backslash\{0\}}\{\lambda\}\cup(B_{1/n}\cap\sigma(T)).\]
+		{\color{orange}Concluir.}
 	\end{enumerate}
 \end{proof}
 	\clearpage
