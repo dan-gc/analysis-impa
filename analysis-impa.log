@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  21 FEB 2024 12:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  22 FEB 2024 20:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -924,7 +924,7 @@ Package cleveref Info: `amsthm' support loaded on input line 3026.
 \c@obs=\count330
 \c@af=\count331
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
-14.
+17.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -937,24 +937,24 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 (./analysis-impa.aux)
 \openout1 = `analysis-impa.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1015,7 +1015,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 114.
+Package hyperref Info: Link coloring ON on input line 117.
 
 (./analysis-impa.out) (./analysis-impa.out)
 \@outlinefile=\write4
@@ -1039,54 +1039,54 @@ al/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}])
 \openout5 = `analysis-impa.toc'.
 
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
-28.
+31.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 Package hyperref Info: bookmark level for unknown defn defaults to 0 on input l
-ine 150.
+ine 153.
  [2]
 Package hyperref Info: bookmark level for unknown exemplo defaults to 0 on inpu
-t line 161.
+t line 164.
 LaTeX Font Info:    Trying to load font information for U+dutchcal on input lin
-e 167.
+e 170.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/dutchcal/udutchcal.fd
 File: udutchcal.fd 2011/06/16 Fontinst v1.933 font definitions for U/dutchcal.
 )
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 10.0pt on input line 167.
+(Font)              scaled to size 10.0pt on input line 170.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 7.0pt on input line 167.
+(Font)              scaled to size 7.0pt on input line 170.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 5.0pt on input line 167.
+(Font)              scaled to size 5.0pt on input line 170.
 Package hyperref Info: bookmark level for unknown exer defaults to 0 on input l
-ine 173.
+ine 176.
 Package hyperref Info: bookmark level for unknown af defaults to 0 on input lin
-e 176.
+e 179.
  [3]
 [4]
 Package hyperref Info: bookmark level for unknown obs defaults to 0 on input li
-ne 250.
+ne 253.
  [5]
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 266.
+ine 269.
  [6]
 Package hyperref Info: bookmark level for unknown teo defaults to 0 on input li
-ne 316.
+ne 319.
 Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
-ine 319.
+ine 322.
  [7] [8] [9] [10] [11]
 Package hyperref Info: bookmark level for unknown exemplos defaults to 0 on inp
-ut line 487.
+ut line 490.
 Package hyperref Info: bookmark level for unknown pregunta defaults to 0 on inp
-ut line 499.
+ut line 502.
  [12] [13] [14] [15] [16]
 Package hyperref Info: bookmark level for unknown exer* defaults to 0 on input 
-line 716.
+line 719.
  [17]
-Overfull \hbox (0.6461pt too wide) in paragraph at lines 753--754
+Overfull \hbox (0.6461pt too wide) in paragraph at lines 756--757
 []\OT1/ppl/m/n/10 Basta ver que ex-iste $\OML/cmm/m/it/10 T \OT1/cmr/m/n/10 : \
 OML/cmm/m/it/10 `[] \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 X$ \OT1/ppl/m/n/10 lin-
 ear e sur-je-tiva para obter $\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 : \OML/cmm/m
@@ -1095,18 +1095,18 @@ ear e sur-je-tiva para obter $\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 : \OML/cmm/m
 
 [18] [19] [20] [21]
 Package hyperref Info: bookmark level for unknown af* defaults to 0 on input li
-ne 894.
+ne 897.
 Package hyperref Info: bookmark level for unknown coro defaults to 0 on input l
-ine 901.
+ine 904.
  [22] [23] [24] [25] [26]
-Overfull \hbox (10.61253pt too wide) in paragraph at lines 1129--1130
+Overfull \hbox (10.61253pt too wide) in paragraph at lines 1132--1133
 \OT1/ppl/m/n/10 Considere $\OML/cmm/m/it/10 X$ \OT1/ppl/m/n/10 um con-junto e u
 ma fam[]^^Plia de ma-pas $\U/dutchcal/m/n/10 F$ \OT1/ppl/m/n/10 de $\OML/cmm/m/
 it/10 X$ \OT1/ppl/m/n/10 para al-guns espa[]os topol[]ogicos,
  []
 
 [27] [28]
-Overfull \hbox (1.99174pt too wide) in paragraph at lines 1171--1172
+Overfull \hbox (1.99174pt too wide) in paragraph at lines 1174--1175
 [][]\OT1/ppl/b/n/10 Defini^^Xc~ao. [][]\OT1/ppl/m/n/10 Seja $\OML/cmm/m/it/10 X
 $ \OT1/ppl/m/n/10 um espa[]o nor-mado. A topolo-gia $\OML/cmm/m/it/10 ^^[\OT1/c
 mr/m/n/10 (\OML/cmm/m/it/10 X[]; J\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m
@@ -1115,13 +1115,13 @@ r/m/n/10 )$ []\OT1/ppl/m/n/10 e a \OT1/ppl/b/it/10 topolo-
  []
 
 [29] [30] [31] [32] [33] [34] [35] [36] [37]
-Overfull \hbox (4.40518pt too wide) in paragraph at lines 1559--1560
+Overfull \hbox (4.40518pt too wide) in paragraph at lines 1562--1563
 [][]\OT1/ppl/b/n/10 Afirma^^Xc~ao. [][]$\OML/cmm/m/it/10 '$ []\OT1/ppl/m/n/10 e
  um home-o-mor-fismo (so-bre sua im-agem) da topolo-gia fraca* para a topolo-
  []
 
 [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49]
-Overfull \hbox (6.92043pt too wide) detected at line 2002
+Overfull \hbox (6.92043pt too wide) detected at line 2005
 \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 'f\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = [] \O
 MS/cmsy/m/n/10 ^^T [] j\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT
 1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 d\OMS/cmsy/m/n/10 j\OML/cmm/m/
@@ -1136,15 +1136,15 @@ cmsy/m/n/10 k[]j\OML/cmm/m/it/10 ^^V\OMS/cmsy/m/n/10 j\OT1/cmr/m/n/10 (\OML/cmm
 
 [50] [51] [52] [53]
 
-LaTeX Warning: Command \textexclamdown invalid in math mode on input line 2155.
+LaTeX Warning: Command \textexclamdown invalid in math mode on input line 2158.
 
 
 
-LaTeX Warning: Command \textexclamdown invalid in math mode on input line 2155.
+LaTeX Warning: Command \textexclamdown invalid in math mode on input line 2158.
 
 
 [54]
-Overfull \hbox (6.9463pt too wide) detected at line 2176
+Overfull \hbox (6.9463pt too wide) detected at line 2179
 \OML/cmm/m/it/10 'f \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 '[]f \OMS/cmsy/m/n/10 ^^
 @ \OML/cmm/m/it/10 '[]f \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/1
 0 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^V\OT1/cmr/m/n/10 (\OM
@@ -1159,14 +1159,14 @@ L/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :
  []
 
 [55] [56]
-Overfull \hbox (15.1831pt too wide) in paragraph at lines 2229--2230
+Overfull \hbox (15.1831pt too wide) in paragraph at lines 2232--2233
 []\OT1/ppl/m/n/10 Existe uma corresponden[]a en-tre fun[][]oes cont[]^^Pnuas $\
 U/msb/m/n/10 N \OMS/cmsy/m/n/10 ! \U/msb/m/n/10 R$ \OT1/ppl/m/n/10 lim-i-tadas 
 com fun[][]oes cont[]^^Pnuas
  []
 
 [57] [58] [59]
-Overfull \hbox (39.46834pt too wide) in paragraph at lines 2354--2355
+Overfull \hbox (39.46834pt too wide) in paragraph at lines 2357--2358
 []\OT1/ppl/m/n/10 Suponha $\U/msb/m/n/10 F[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10
  h\OML/cmm/m/it/10 a; b\OMS/cmsy/m/n/10 i$\OT1/ppl/m/n/10 . Para cada $\OML/cmm
 /m/it/10 c \OMS/cmsy/m/n/10 2 f\OML/cmm/m/it/10 a; b; a[]; b[]\OMS/cmsy/m/n/10 
@@ -1177,67 +1177,60 @@ ppl/m/n/10 .
  []
 
 [60] [61] [62] [63]
-Overfull \hbox (0.49768pt too wide) in paragraph at lines 2505--2507
+Overfull \hbox (0.49768pt too wide) in paragraph at lines 2508--2510
 []\OT1/ppl/m/n/10 e um \OT1/ppl/b/it/10 sis-tema ortonor-mal max-i-mal \OT1/ppl
 /m/n/10 (um con-junto ortonor-mal max-i-mal) em $\OML/cmm/m/it/10 L[]\OT1/cmr/m
 /n/10 (0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1)$\OT1/ppl/m/n/10 . 
  []
 
 [64]
-Overfull \hbox (44.40604pt too wide) detected at line 2552
+Overfull \hbox (44.40604pt too wide) detected at line 2555
 []
  []
 
 [65] [66] [67] [68]
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 12.0pt on input line 2690.
+(Font)              scaled to size 12.0pt on input line 2693.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 8.0pt on input line 2690.
+(Font)              scaled to size 8.0pt on input line 2693.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 6.0pt on input line 2690.
+(Font)              scaled to size 6.0pt on input line 2693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2690.
+(hyperref)                removing `math shift' on input line 2693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2690.
+(hyperref)                removing `subscript' on input line 2693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2690.
+(hyperref)                removing `math shift' on input line 2693.
 
 [69] [70] [71] [72]
 
-LaTeX Warning: Command \i invalid in math mode on input line 2827.
+LaTeX Warning: Command \i invalid in math mode on input line 2830.
 
 [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87]
 [88] [89] [90] [91] [92] [93]
-Overfull \hbox (1.74149pt too wide) in paragraph at lines 3653--3655
+Overfull \hbox (1.74149pt too wide) in paragraph at lines 3656--3658
 \OT1/ppl/m/n/10 Agora $\OML/cmm/m/it/10 S$ []\OT1/ppl/m/n/10 e uma bijec[][]ao 
 cont[]^^Pnua, as-sim pelo Teo-rama da Aplica[][]ao Aberta ele []e cont[]^^Pnua.
 
  []
 
-
-LaTeX Warning: cref reference format for label type `thmt@dummyctr' undefined o
-n input line 3659.
-
 [94] [95] [96] [97] [98] [99
 
 ] [100] (./analysis-impa.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `analysis-impa.out' has not changed.
 (rerunfilecheck)             Checksum: 6C05F52B345F9D09D81EC4CC40FB465D;6178.
  ) 
 Here is how much of TeX's memory you used:
- 30734 strings out of 476025
- 619238 string characters out of 5790018
+ 30758 strings out of 476025
+ 619788 string characters out of 5790018
  1868388 words of memory out of 5000000
- 49836 multiletter control sequences out of 15000+600000
+ 49859 multiletter control sequences out of 15000+600000
  531918 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,85p,1202b,1219s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1260,10 +1253,10 @@ exlive/2023/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/
 2023/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2023/t
 exmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-di
 st/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on analysis-impa.pdf (100 pages, 555008 bytes).
+Output written on analysis-impa.pdf (100 pages, 554708 bytes).
 PDF statistics:
- 1589 PDF objects out of 1728 (max. 8388607)
- 1434 compressed objects within 15 object streams
- 831 named destinations out of 1000 (max. 500000)
+ 1591 PDF objects out of 1728 (max. 8388607)
+ 1436 compressed objects within 15 object streams
+ 832 named destinations out of 1000 (max. 500000)
  293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

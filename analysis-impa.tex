@@ -39,6 +39,8 @@
 }
 \usepackage{cleveref}
 
+
+
 \renewcommand{\contentsname}{Índice}
 
 %Referencias
@@ -93,6 +95,7 @@
 \declaretheorem[style=colored10,numbered=no,name=Pergunta]{pregunta}
 
 \crefname{exer}{exercício}{exercícios}
+\crefname{exer*}{exercício}{exercícios}
 
 \renewcommand{\proofname}{Demostração}
 
@@ -3541,9 +3544,9 @@ Assim, o único ponto de acumulação de um operador compacto é zero.
 		
 		Note que
 		\[\img(T-\lambda)=\img(T-\lambda)|_Y.\]
-		\begin{exer*}\label{exer:img-fechada}
+		\begin{exer}\label{exer:img-fechada}
 			Suponha $E\to F$, $\delta>0$ e $\|Sx\|\geq \delta\|x\|$ (continuidade da inversa?), então $\img(S)$ é fechado.
-		\end{exer*}
+		\end{exer}
 		Suponha que existe uma sequência $(x_n)\subseteq\partial B_Y$ tal que
 		\[\|Tx_n-\lambda x_n\|\to 0.\]
 		Como $T$ é compacto, podemos supor que $(T(x_n))$ é Cauchy. Como $\lambda\neq0$, $(x_n)$ é Cauchy. Defina
@@ -3656,7 +3659,7 @@ Primeiro vamos provar:
 		\|x\|&=\|S^{-1}Tx\|\\
 		&\leq\|S^{-1}\|\|Tx\|
 	\end{align*}
-	Por \cref{exer:img-fechada}, $\img T$ é fechada.
+	Pelo \cref{exer:img-fechada}, $\img T$ é fechada.
 \end{proof}
 \begin{proof}[Prova do \cref{teo:fredholm-conditions}]
 	Usando as hipóteses e a proposição anterior, sabemos que existem subespaços fechados $Y_1,Y_2,Y_3\subseteq Y$ tal que
