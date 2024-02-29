@@ -3545,15 +3545,17 @@ Assim, o único ponto de acumulação de um operador compacto é zero.
 		Note que
 		\[\img(T-\lambda)=\img(T-\lambda)|_Y.\]
 		\begin{exer}\label{exer:img-fechada}
-			Suponha $E\to F$, $\delta>0$ e $\|Sx\|\geq \delta\|x\|$ (continuidade da inversa?), então $\img(S)$ é fechado.
+			Suponha $E\to F$, $\delta>0$ e $\|Sx\|\geq \delta\|x\|$, então $\img(S)$ é fechado.
 		\end{exer}
-		Suponha que existe uma sequência $(x_n)\subseteq\partial B_Y$ tal que
+		Para obter uma contradição, suponha que as hipóteses do exercício não estão satisfeitas. Então existe uma sequência $(x_n)\subseteq\partial B_Y$ tal que
 		\[\|Tx_n-\lambda x_n\|\to 0.\]
-		Como $T$ é compacto, podemos supor que $(T(x_n))$ é Cauchy. Como $\lambda\neq0$, $(x_n)$ é Cauchy. Defina
+		Como $T$ é compacto, podemos supor que $(Tx_n)$ é Cauchy. Como $\lambda\neq0$, podemos escrever
+		\[x_n=\frac{1}{\lambda}(Tx_n-(T-\lambda)x_n)\]
+		e concluir que $(x_n)$ é Cauchy. Defina
 		\[x=\lim_nx_n.\]
 		Portanto, $Tx=\lambda x$, e assim $x\in \ker(T-\lambda)=Z$.
 		
-		Por outro lado, como $(x_n)\subseteq Y$ e $Y$ fechado, $x\in Y$. Assim, $x=0$, absurdo pois a sequência tá contida em $\partial B_Y$.
+		Por outro lado, como $(x_n)\subseteq Y$ e $Y$ fechado, $x\in Y$. Assim, $x=0$, absurdo pois a sequência está contida em $\partial B_Y$.
 		
 		Para comprovar a seguite afirmação em 2., considere o quociente
 		\[\pi:X\to X/\img(T-\lambda).\]
@@ -3591,14 +3593,14 @@ Assim, o único ponto de acumulação de um operador compacto é zero.
 \begin{lema}
 	Seja $T\in K(X)$ e $\lambda\in\C\backslash\{0\}$. Então
 	\begin{enumerate}
-		\item $\exists m\in\N$ tal que 
-		\[\ker(T-\lambda)^n=\ker(T-\lambda^{n+1}).\]
+		\item Existe $m\in\N$ tal que 
+		\[\ker(T-\lambda)^n=\ker(T-\lambda)^{n+1}.\]
 		\item Existe $n\in \N$ tal que
 		\[\img(T-\lambda)^n=\img(T-\lambda)^{n+1}\]
 	\end{enumerate}
 \end{lema}
 \begin{obs}
-	$\ker T^n\subseteq T^{n+1}$ e $\img T^n\supseteq \img T^{n+1}$.
+	$\ker T^n\subseteq \ker T^{n+1}$ e $\img T^n\supseteq \img T^{n+1}$.
 \end{obs}
 \begin{proof}
 	Suponha falso, ie.
@@ -3606,16 +3608,19 @@ Assim, o único ponto de acumulação de um operador compacto é zero.
 	Pelo lema de Riesz, existe $(x_n)\subseteq\partial B_X$ tal que
 	\begin{enumerate}
 		\item  $x_n\in \ker(T-\lambda)^n$.
-		\item $d(x_{n+1},\ker(T-\lambda)^n)<1/2$.
+		\item $d(x_{n+1},\ker(T-\lambda)^n)>1/2$.
 	\end{enumerate}
 	\begin{af*}
-		$T(x_n)$ não possui uma subsequência convergente.
+		$(Tx_n)$ não possui uma subsequência convergente.
 	\end{af*}
+	Note que
 	\begin{align*}
-		T(x_n)-T(x_m)&=\lambda x_n+(T-\lambda)x_n-(T-\lambda)(x_m)-\lambda x_m.
+		Tx_n-Tx_m&=\lambda x_n+(T-\lambda)x_n-(T-\lambda)x_m-\lambda x_m.
 	\end{align*}
+	Defina
+	\[z:=(T-\lambda)x_n-(T-\lambda)x_m-\lambda x_m.\]
 	Se $n>m$,
-	\[(T-\lambda)x_n-(T-\lambda)x_n-\lambda x_n\in\ker(T-\lambda)^{n-1}.\]
+	\[z\in\ker(T-\lambda)^{n-1}.\]
 	Como $d(x_n,\ker(T-\lambda)^{n-1})>1/2$,
 	\begin{align*}
 		\|Tx_n-Tx_m\|&=\|\lambda x_n+z\|\\
@@ -3626,7 +3631,7 @@ Assim, o único ponto de acumulação de um operador compacto é zero.
 	{\color{orange} O item 2, exercício.}
 \end{proof}
 \begin{exer*}
-	Se $S$ é Fredholm, o lema anterior vale substituindo $T-\lambda$ por $S$?
+	Se $S$ é Fredholm, o lema anterior vale substituindo $T-\lambda$ por $S$? Considere o shift.
 \end{exer*}
 
 \begin{defn}
@@ -3645,12 +3650,12 @@ Primeiro vamos provar:
 \begin{prop}
 	Seja $T\in\mathcal{L}(X,Y)$ tal que existe $Z\subseteq Y$ fechado tal que
 	\[Y=Z\oplus\img T\quad\text{(algebricamente)}.\]
-	(Note que se subessemos que o espaço $\img T$ é fechado, já teriamos que ele é complementado.) Então $\img T$ é fechado.
+	Então $\img T$ é fechado.
 \end{prop}
 \begin{proof}
 	Substituindo $T$ por 
 	\[\tilde{T}:[x]\in X/\ker T\mapsto Tx\in Y,\]
-	podemos supor que $T$ é injetivo. Para usar o teorema da Aplicação Aberta, defina
+	podemos supor que $T$ é injetivo. Para usar o Teorema da Aplicação Aberta, defina
 	\[S:X\oplus Z\to Y\]
 	como
 	\[S(x,y)=Tx+y.\]
@@ -3815,6 +3820,215 @@ Finalmente,
 		{\color{orange}Concluir.}
 	\end{enumerate}
 \end{proof}
+\begin{teo}[Atkinson]\label{teo:atkinson}
+	Seja $X$ um espaço de Banach de dimensão infinita e
+	\[\pi:\mathcal{L}(X)\to\mathcal{L}(X)/K(X)\]
+	a projeção na álgebra de Calkin. Então $T\in\mathcal{L}(X)$ é Fredholm se e somente se $\pi (T)\in\operatorname{Inv}(X/K(X))$.
+\end{teo}
+
+\begin{lema}
+	Seja $T\in\mathcal{L}(X)$ Fredholm. Existe $S\in\mathcal{L}(X)$ tal que
+	\begin{enumerate}
+		\item $1=ST$, $1-TS$ tem posto finito.
+		\item $\operatorname{ind}S=-\operatorname{ind}T$.
+		\item $TST=S$
+	\end{enumerate}
+\end{lema}
+\begin{proof}
+	Como $T$ é Fredholm, existem $X_1,X_2\subseteq X$ tais que
+	\[X=X_1\oplus \ker T\quad\text{e}\quad X=\img T\oplus X_2\]
+	Defina $S:X\to X$ como
+	\[S(x_0,x_1)=((T|_{X_1})^{-1}(x_1),0)\qquad\forall (x_1,x_2)\in\img T\oplus X_2.\]
+\end{proof}
+\begin{proof}[Prova do \cref{teo:atkinson}]
+	Suponha $T\in\mathcal{L}(X)$ é Fredholm. Pegue $S$ como no lema. Logo,
+	\[0=\pi(1)-\pi(S)\pi(T)\quad\text{e}\quad0=\pi(1)-\pi(T)\pi(S),\]
+	ou seja,
+	\[\pi(T)^{-1}=\pi(S).\]
+	
+	Suponga $\pi(T)\in\img(\mathcal{L}(X)(K(X))$. Logo existe $S\in\mathcal{L}(X)$ tal que
+	\[\pi(S)\pi(T)=\pi(T)\pi(S)=\pi(1).\]
+	Portanto,
+	\[W=1-ST\quad\text{e}\quad W'=1-TS\]
+	são compactos.
+	
+	Note que
+	\[\ker T\subseteq \ker(W-1).\]
+	Como $W$ é compacto, $\ker(W-1)$ tem dimensão finita, logo, $\dim\ker T<\infty$.
+	
+	Por outro lado, como
+	\[\img(W-1)\subseteq\img T,\]
+	segue que
+	\[\operatorname{codim}(\img T)<\infty.\]
+\end{proof}
+
+\begin{teo}
+	Seja $X$ Banach de dimensão infinita e denote o conjunto de operadores Fredholm em $X$ por $\Phi$.
+	\begin{enumerate}
+		\item $\Phi$ é aberto.
+		\item $T\in\Phi\to\operatorname{ind}T\in\Z$ é contínuo.
+	\end{enumerate}
+\end{teo}
+\begin{proof}\leavevmode
+	\begin{enumerate}
+		\item Seja $\pi:\mathcal{L}(X)\to\mathcal{L}(X)/K(X)$ o quociente. Então
+		\[\Phi=\pi^{-1}(\operatorname{Inv}(\mathcal{L}(X)/K(X))).\]
+		\item Sejam $T\in\Phi$, $S\in\Phi$ tais que $TST=T$ e $\operatorname{ind}S=-\operatorname{ind}T$, e $T'\in\Phi$ tal que $\|T-T'\|<\|S\|^{-1}$.
+		
+		Como $\|TS-T'S\|<1$,
+		\[W=1-TS+T'S\]
+		é inversível. Como $T=TST$,
+		\[WT=T'ST.\]
+		Portanto,
+		\[\operatorname{ind}W+\operatorname{ind}T=\operatorname{ind}T'+\operatorname{ind}S+\operatorname{ind}T.\]
+		Como $\operatorname{ind}W=0$, temos que
+		\[\operatorname{ind}T'=\operatorname{ind}S=\operatorname{ind}T.\]
+	\end{enumerate}
+\end{proof}
+\begin{coro}
+	Seja $T\in\mathcal{L}(X)$ Fredholm e $S\in K(X)$. Então $\operatorname{ind}(T+S)=\operatorname{ind}T$.
+\end{coro}
+\begin{proof}
+	Primero notemos que pertubar um operador de Fredholm por um compacto é Fredholm, ie.
+	
+	\textbf{($T+S\in\Phi$)} Como $T\in\Phi$, $\pi(T)$ é inversível. Como $\pi(T)=\pi(T+S)$, $T+S\in\Phi$.
+	
+	Como $S\in K(X)$, $tS\in K(X)\;\forall t\in\R$. Logo, como
+	\[t\in\R\mapsto T+tS\in\Phi\]
+	e
+	\[W\in\Phi\mapsto\operatorname{ind}(W)\in\Z\]
+	são contínuas,
+	\[t\in\R\mapsto\operatorname{ind}(T+ts)\in\Z\]
+	é constante.
+\end{proof}
+\begin{obs}[Relembre]
+	$A$ álgebra de Banach com unidade, então $e^a$ existe para todo $a\in A$, ie.
+	\[e^a=\sum_{n=0}^\infty\frac{a^n}{n!}.\]
+\end{obs}
+\begin{pregunta}
+	Quais elementos são a exponencial de alguém? Ou seja, o que é
+	\[\{e^a:a\in A\}?\]
+	Será que é $\operatorname{Inv}(A)$? Em $\C$ é verdade, mais em geral, não.
+\end{pregunta}
+\begin{coro}
+	Seja $X=\ell_p,c_0$ e considere o operador shift:
+	\begin{align*}
+		S:X&\mapsto X\\
+		e_n&\mapsto e_{n+1}.
+	\end{align*}
+	Seja
+	\[\pi:\mathcal{L}(X)\to \mathcal{L}(X)/K(X)\]
+	o quociente. Então
+	\[\pi(S)\notin\{e^a:a\in\mathcal{L}(X)/K(X)\}.\]
+\end{coro}
+\begin{proof}
+	\textbf{($S$ é Fredholm)} $\ker S=\{0\}$ e $\img S=\{(x_n)\in X:x_1=0\}$.
+	Logo $\operatorname{ind}(S)=-1$.
+	\begin{af}
+		Se $T\in\operatorname{Inv}(X)$, então $\pi(S)\neq\pi(T)$.
+	\end{af}
+	Caso contrário, $S-T\in K(X)$. Logo
+	\[-1=\operatorname{ind}S=\operatorname{ind}T=0.\]
+	Suponha $\pi(S)=e^a$ para algum $a\in\mathcal{L}(X)/K(X)$. Logo $a=\pi(T)$, $T\in\mathcal{L}(X)$. Portanto
+	\[\pi(S)=e^{\pi(T)}=\pi(e^T).\]
+\end{proof}
+
+\section{Teorema espectral para operadores compactos e autoadjuntos}
+Seja $H$ um espaço de Hilbert e $T\in\mathcal{L}(H)$. Para cada $x\in H$, considere
+\[y\in H\mapsto \langle Ty,x\rangle\in\mathbb{K}.\]
+Note que ese mapa é um funcional linear. Logo, existe um único $z_x\in H$ tal que
+\[\langle y,z_x\rangle=\langle Ty,x\rangle\qquad\forall y\in H.\]
+
+\begin{defn}
+	O \textbf{\textit{adjunto}} de $T$ é o operador $T^*:H\to H$ dado por
+	\[Tx=z_x\qquad\forall x\in H.\]
+\end{defn}
+\begin{exer*}\leavevmode
+	\begin{enumerate}
+		\item $T^*\in\mathcal{L}(X)$.
+		\item Qual é a relação entre esse adjunto e o adjunto já introduzido anteriormente?
+	\end{enumerate}
+\end{exer*}
+
+\begin{prop}
+	Seja $T\in\mathcal{L}(H)$ autoadjunto.
+	\begin{enumerate}
+		\item Se $\lambda\in\C$ é autovalor de $T$, $\lambda\in\R$.
+		\item Sejam $\lambda, \lambda'\in\C$ autovalores distintos con autovetores $x$ e $x'$ respectivamente. Então $x\perp x'$.
+	\end{enumerate}
+\end{prop}
+
+\begin{prop}
+	Seja $T\in\mathcal{L}(H)$ autoadjunto. Então
+	\[f(T)=\|T\|.\]
+\end{prop}
+\begin{proof}
+	Exercício.
+\end{proof}
+\begin{coro}
+	Se $\sigma(T)=\{0\}$, $T=0$.
+\end{coro}
+\begin{proof}
+	Sabemos que 
+	\[r(T)=\lim_n\|T^*\|^{1/n}.\]
+	Note que $\|T^*T\|=\|T\|^2$, pois
+	\begin{align*}
+		\|T\|^2	&=\sup_{x\in B_X}\langle Tx,Tx\rangle\\
+		&=\sup_{x\in B_X}\langle T^*Tx,Tx\rangle\\
+		&\leq\|T^*T\|.
+	\end{align*}
+	Logo
+	\begin{align*}
+		r(T)&=\lim_n\|T^{2n}\|^{1/2n}\\
+		&=\lim_n\|(T^*)^n-T^n\|^{1/2n}\\
+		&=\lim_n\|T^{2n}\|^{1/2n}\\
+		&=\|T\|.
+	\end{align*}
+\end{proof}
+\begin{teo}[Espectral para Operadores Auto-adjuntos Compactos]
+	Se $T\in K(H)$ é auto-adjunto então existe um conjunto maximal ortonormal composto por autovetores de $T$.
+	
+	Em particular, existe $(\lambda_n)\subset\R$ e $(x_n)\subset\partial B_X$ tais que
+	\[Tx=\sum_{n=1}^\infty\lambda_n\langle x,x_n\rangle x_n\qquad \forall x\in H.\]
+\end{teo}
+\begin{proof}
+	Para cada $\lambda\in\sigma(T)$, escreva
+	\[H_\lambda\in \ker(T-\lambda).\]
+	Então,
+	\begin{enumerate}
+		\item $\dim H_\lambda<\infty$ se $\lambda\neq0$.
+		\item $H_\lambda\perp H_{\lambda'}$, $\lambda\neq\lambda'$.
+		\item $\sigma(T)$ é enumerável.
+	\end{enumerate}
+	Defina
+	\[H'=\bigoplus_{\lambda\in\sigma(T)}H_\lambda.\]
+	\begin{obs}
+		O produto interno na soma de espaços de Hilbert é soma dos produtos internos.
+	\end{obs}
+	Resta mostrar que $H=H'$.
+	\begin{af*}
+		$T(H')\leq H'$.
+	\end{af*}
+	Isso segue pois
+	\[T(H_\lambda)\subseteq H_\lambda\qquad\forall\lambda\in\sigma(T).\]
+	\begin{af*}
+		$T((H)^\perp)\subseteq(H')^\perp$.
+	\end{af*}
+	Seja $y\ n (H')^\perp$ e $x\in H'$. Então
+	\[\langle Ty,x\rangle=\langle y,Tx\rangle=0.\]
+	O que podemos falar sobre
+	\[T|_{(H')^\perp}(H')^\perp\to(H')^\perp.\]
+	Como $T$ é compacto e auto-adjunto, $T|_{(H')^\perp}$ é compacto e auto-adjunto,
+	\[\sigma(T|_{(H')^\perp})=\{0\}.\]
+	Logo
+	\[T|_{(H')^\perp}=0.\]
+	Portanto,
+	\[(H')^\perp\subseteq H_0=\ker T.\]
+	Logo, $(H')^\perp=\{0\}$, ie. $H=H'$.
+	
+\end{proof}
+
+
 	\clearpage
 	\iffalse
 	\section{Exercícios}
