@@ -1536,7 +1536,7 @@
 		\end{enumerate}
 	\end{proof}
 	\begin{coro}
-		SEja $X$ espaço Banach, $Y$ normado e $(f_n)\subseteq X^*$ tal que $f_n\overset{w^*}{\longrightarrow}f\in X^*$. Então $(f_n)$ é limitada.
+		Seja $X$ espaço Banach, $Y$ normado e $(f_n)\subseteq X^*$ tal que $f_n\overset{w^*}{\longrightarrow}f\in X^*$. Então $(f_n)$ é limitada.
 	\end{coro}
 	
 	\begin{teo}[Banach-Alaoglu-Bourbaki]
@@ -1730,7 +1730,7 @@
 		\end{enumerate}
 	\end{defn}
 	\begin{teo}[da aplicação aberta]
-		Sejam $X$ e $Y$ espaços normados com $X$ Banach, $T:X\to Y$ linear e limitado e $T(X)$ de segunda categoria. Então $T$ é uma aplicação aberta. Em particular, $T$ é sobrejetiva.
+		Sejam $X$ e $Y$ espaços normados com $X$ Banach, $T:X\to Y$ linear e limitado e $T(X)$ de segunda categoria. Então $T$ é uma aplicação aberta. Em particular, se $T$ é sobrejetiva, é aberta.
 	\end{teo}
 	\begin{proof}
 		Meta: $T(U)$ é aberto se $U\subseteq X$ é aberto. Note que é suficiente mostrar que
@@ -1793,7 +1793,7 @@
 		Teorema de categoría de Baire.
 	\end{proof}
 	\begin{coro}
-		Se, mais ainda, $T$ for injetivo, então $T^{-1}$ é limitado.
+		Se ainda $T$ for injetivo, então $T^{-1}$ é limitado.
 	\end{coro}
 	\begin{coro}
 		Seja $(X,\|\;\|)$ espaço de Banach e $(\vertiii{\;})$ uma norma Banach em $X$. Se $T:(X,\|\;\|)\to(X,\vertiii{\;})$ for contínua, então $\|\;\|\sim\vertiii{\;}$.
@@ -1916,7 +1916,7 @@
 \end{proof}
 \begin{prop}
 	Sejam $X$ e $Y$ espaços de Banach e considere $S:Y^*\to X^*$ linear.
-	\[S\text{é fraco* contínuo}\iff\exists T\in\mathcal{L}(X,Y):S=T^*.\]
+	\[S\text{ é fraco* contínuo}\iff\exists T\in\mathcal{L}(X,Y):S=T^*.\]
 \end{prop}
 \begin{proof}
 	$(\impliedby)$. Já está.
@@ -2564,11 +2564,11 @@ Agora vamos estudar em qué casos tem a igualdade.
 		\begin{align*}
 			S\text{ é maximal}&\iff \sum_{y\in S}\langle x,y\rangle y=x\quad\forall x\in X\\
 			&\iff\overline{\operatorname{span}}\{S\}=X\\
-			&\iff\|x\|^2=\sum_{y\in S}|\langle x,y\rangle|^2\qquad\text{(Parseval)}
+			&\iff\|x\|^2=\sum_{y\in S}|\langle x,y\rangle|^2\quad\forall x\in X\qquad\text{(Parseval)}
 		\end{align*}
 	\end{enumerate}
 \end{teo}
-\begin{proof}
+\begin{proof}\leavevmode
 	\begin{enumerate}
 		\item \begin{exer*}[Critério de Cauchy]
 		É suficiente mostrar que $\forall\varepsilon>0$ existe $S_0$ tal que para todo $S_1\subseteq S\backslash S_0$ finito temos que
@@ -3217,7 +3217,7 @@ De fato,
 	onde $\lambda_0,\ldots,\lambda_n\in\C$ e $\lambda_0\neq0$.
 	Logo
 	\[p(a)-\lambda=\lambda_0(a-\lambda_1)\ldots(a-\lambda_n).\]
-	Como $a-\lambda_1,\ldots,a-\lambda_n$ comutam, $p(a)-\lambda$ é inversível se somente se cada $a-\lambda_i$ é inversível. Ou bem,
+	Como $a-\lambda_1,\ldots,a-\lambda_n$ conmutam, $p(a)-\lambda$ é inversível se somente se cada $a-\lambda_i$ é inversível. Ou bem,
 	\[\lambda\in\sigma(p(a))\iff\exists i\leq n\text{ tal que } \lambda_i\in\sigma(a)\iff\exists\mu:\lambda_i\in\C:p(\mu)=\lambda\text{ e }\mu\in\sigma(a).\]
 \end{proof}
 \begin{prop}
